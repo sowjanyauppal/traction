@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRACTION LIFT SERVICES</title>
+
+    <style>
+        .notification-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .notification-container.show {
+            display: block;
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .notification-message {
+            flex-grow: 1;
+        }
+        
+        .notification-cancel {
+            cursor: pointer;
+        }
+        </style>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="img/traction.jpg" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">TRACTION-LIFTS</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="property-list.html" class="dropdown-item">Property List</a>
+                                <a href="property-type.html" class="dropdown-item">Property Type</a>
+                                <a href="property-agent.html" class="dropdown-item">Property Agent</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Error</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Header Start -->
+        <div class="container-fluid header bg-dark p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4"><span class="text-primary"> MOST POPULAR ELEVATOR COMPANY<br>TRACTION-LIFTS</span></h1>
+                    <p class="animated fadeIn mb-4 pb-2"></p>
+                    <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel">
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/123.jpg" alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/234.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Search Start -->
+        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-10">
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <select class="form-select border-0 py-3">
+                                    <option selected>Location</option>
+                                    <option value="1">>Hyderabad</a></option>
+                                    <option value="2">Nellore</option>
+                                    
+                                </select>   
+                            </div>
+                            <div class="col-md-4">
+                                
+                            </div>
+                            <div class="col-md-4">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select border-0 py-3">
+                            <option selected>Contact</option>
+                            <option value="1">+919177488873</option>
+                            <option value="2">+919966418882</option>  
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search End -->
+
+
+        <!-- Category Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Why Choose Us ?</h1>
+                    <p></p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="data:image/png;base64,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" alt="Icon">
+                                </div>
+                                <h6>24/7 Customer Support</h6>
+                                <span></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE6Atezi8i_1KScBCWd0QMszExaF5JMhmHhw&s" alt="Icon">
+                                </div>
+                                <h6>Affordable Pricing</h6>
+                                <span></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="data:image/png;base64,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" alt="Icon">
+                                </div>
+                                <h6>Modern & Customized Solutions</h6>
+                               
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYV8Ht2i-rBLbYwCXoeQicudEHrKGmUT4ww&s" alt="Icon">
+                                </div>
+                                <h6>Consultation & Analysis</h6>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                   
+                    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="img/w3.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">15 Years Of Experience In This Business.</h1>
+                        <p class="mb-4">Easy move is a well-known elevator company:<br><br>
+                            There are many elevator companies but easy move elevator is a bit different from others because we are following the market trend to reach the customer requirements. Our highly professional staff serving in the market of the middle east. Our brand has a huge quantity of variety. We are not only focused on quantity, best quality is always our first priority. we are manufacturing with high industrial material. we at Easy move elevator are very responsive and we are creating affordable choices for customers with a warranty for many years.
+                            <br>We can customize your elevator according to your needs and budget. Our skilled technicians and experienced engineers are experts in their field and provide the best service to our valued clients. Our professional team has worked in this field for more than ten years. We will work closely with you from start to finish, providing an extensive list of options for all aspects of your project, including:
+                            </p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Custom configurations for each type of elevator.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>We guarantee that your property is worth it.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Our top priority is your safety with modern features.</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Property List Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-0 gx-5 align-items-end">
+                    <div class="col-lg-6">
+                        <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                            <h1 class="mb-3">OUR PRODUCTS</h1>
+                            <p>Here is the list of some products in which
+                                we deal with our customer</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                        
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://lh4.googleusercontent.com/proxy/8F6io6T0DxUbsrPqDOVsicTuq39o7uU5pIJEH2aUOJAVKhD6wBgje-8kJ6Yg1XV13J3c0j4EJJl0ZehfhWILCWAdXTnTYq47E6a2D_0rr8HUCbDkeuw" alt=""></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Cargo Lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNkzxE0eQ6ZCVU_oD-rcTAH1sPo4jINI9HA&s" alt="" style="height: 300px;"></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Car lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSusGd8gCKacWyHTnHpYEVIEzzGL31rzNGREA&s" alt="" style="width: 350px;height: 350px;"></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Lift Cabin Design</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://www.checkatrade.com/blog/wp-content/uploads/2021/08/Feature-Home-lift-cost.jpg" alt=""></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home Lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        
+                                    </div>
+                                    <div class="d-flex border-top">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://www.rjlifts.co.uk/wp-content/uploads/2022/11/passenger-lift.png" alt="" style="height: 300px;"></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Passenger Lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                       
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://5.imimg.com/data5/RW/MC/DD/SELLER-38633872/panoramic-lift-500x500.jpg" alt=""></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Panoramic Lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUkmuCbat7kZZaQPTOUyJ-Wnab1dinyJY8koKqYe36nA&s" alt="" style="width: 350px;"></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Round Elevator</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div><div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://5.imimg.com/data5/NV/UN/MY-38014074/hotel-elevator-500x500.jpg" alt=""></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hotel lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div><div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="https://5.imimg.com/data5/PW/IY/RL/SELLER-3072333/hospital-elevator.jpg" alt=""></a>
+                                        
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Hospital lift</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                                <a class="btn btn-primary py-3 px-5" href=""> More Properties</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Property List End -->
+
+
+        <!-- Call to Action Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-dark rounded p-3">
+                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                <img class="img-fluid rounded w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwEHDW4CZwLGCxWLUIlD3O2LE1Uh2V6r1XlQ&s" alt="">
+                            </div>
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="mb-4">
+                                    <h1 class="mb-3">Contact Us</h1>
+                                    <p><i class="fa fa-phone-alt me-2"></i><a href="tell:9177488873">9177488873</a> </p>
+                                    <p><i class="fa fa-phone-alt me-2"></i><a href="tell:+9966418882">9966418882</a> </p>
+                                </div>
+                                <a href="tel:9177488873" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Make A Call</a>
+                                <a href="https://wa.me/9177488873" class="btn btn-dark py-3 px-4" ><i class="fa fa-phone-alt me-2"></i>Whats app</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action End -->
+
+
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Services:</h1>
+                    <p>There are many Elevator companies, But TRACTION LIFTSis a well-known company in the list of quality and services.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe6jCNvHBGuuvxJ3d7XIy546KDXImo9kr0Eg&s" alt="" style="width: 300px;height: 300px;">
+                                
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">ELEVATOR SUPPLY AND PARTS</h5>
+                                <p>EM Elevators offers a large and industrial quality range of elevator spare parts. You can find a replacement part for your elevator and contact us without any hesitation..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhlp47syi9wMIqmUOGibEMlRQ31NwD9NcTA&s" alt="" style="width: 250px;">
+                                
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">INSTALLATION SERVICES</h5>
+                                <p>Our well-experienced staff is always ready to provide elevator installation services. EM Elevators will provide you desired installation design.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-HzV8OG8nqfehqmP5A88A8Ztwphm-q-CDew&s" alt="" style="height: 300px;">
+                                
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">MAINTENANCE AND REPAIRING</h5>
+                                <p>EM Elevators are providing maintenance elevator and repair services at affordable rates. Our team experts providing quality maintenance services..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUQN167-zbcixJsaJ9GccBXp_NQHMHo-alg&s" alt="" style="height: 300px;">
+                                
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">CONSULTANCY SERVICES</h5>
+                                <p>We will advise you according to your requirements survey and provide safe and dependable solutions as experts in managing people flows and goods transfer in your buildings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Features</h1>
+                    <p></p>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item bg-dark rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <h6 class="fw-bold mb-1">REPAIR</h6>
+                            <p>When your elevator requires repair ,we are here to help.
+                                our technicians are trained to diagnose and address</p>
+                            <div class="d-flex align-items-center">
+                                
+                                <div class="ps-3">
+                                    
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-dark rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <h6 class="fw-bold mb-1">SUPPLY PARTS</h6>
+                            <p>Our supply of elevator partsv is sourced from reputable manufactureas.</p>
+                            <div class="d-flex align-items-center">
+                                
+                                <div class="ps-3">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-dark rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <h6 class="fw-bold mb-1">INSTALLATION</h6>
+                            <p>Get in touch with us for a seamless installation of machine room elevators.</p>
+                            <div class="d-flex align-items-center">
+                               
+                                <div class="ps-3">
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-dark rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <h6 class="fw-bold mb-1">CONSULTATION</h6>
+                            <p>Whether you are planning a new installation,seeking to upgrade an existing system.</p>
+                            <div class="d-flex align-items-center">
+                               
+                                <div class="ps-3">
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch<br><br>Hyderabad</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> <a href="https://maps.app.goo.gl/JnLN3ufsNPNKdF667">
+                                Hyderabad Head Office Flat No.301, Sivakesava Enclave, Indian Bank Building, KPHB 6th Phase, Hyderabad-500049(TS).</a></p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tell:9177488873">9177488873</a></p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i> Email: tp.care90@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Nellore</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Nellore Branch 27/10/813/5, FCI Colony, Near Highway road Bharath petrolbunk, backside Street, Rayapalem Mainroad, Nellore-524002(AP)</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tell:9966418882">9966418882</a>
+                        </p>
+
+                        
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i> Email: tp.care90@gmail.com.</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/traction.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="img/traction.jpg" alt="">
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">BVS Services</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <div class="notification-container" id="notification">
+        <div class="notification-content">
+            <div class="notification-message">    </div>
+            <div class="notification-cancel" onclick="cancelAd()"> మీరు వెబ్సైట్
+                ని తెలుగులో చూడాలి అనుకుంటున్నారా అయితే ఈ లింక్ ని క్లిక్ చేయండి</div>
+        </div>
+    </div>
+    
+    <script>
+    let notifications = document.getElementById('notification');
+    let ads = ['https://tractionliftstelugu.netlify.app']; // Deep link URLs of ads
+    let currentIndex = 0;
+    
+    function displayAd() {
+        notifications.classList.add('show');
+        setTimeout(hideAd, 10000); // Hide ad after 10 seconds
+    }
+    
+    function hideAd() {
+        notifications.classList.remove('show');
+        currentIndex = (currentIndex + 1) % ads.length;
+        setTimeout(displayAd, 10000); // Display next ad after 10 second
+    }
+    
+    function cancelAd() {
+        window.location.href = ads[currentIndex];
+    }
+    
+    displayAd(); // Start displaying ads
+    </script>
+</body>
+
+</html>
